@@ -14,4 +14,6 @@ class DogsListDisplayData: DisplayData {
     let dogsListTitle = "Dogs List"
     let emptyListLabel = "You have no dogs yet"
     let addDogButtonLabel = "Add a dog"
+    let dogTableViewCell = "DogTableViewCell"
+    
 }

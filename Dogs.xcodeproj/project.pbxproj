@@ -30,6 +30,8 @@
 		1F2BDCA0201FDE44004870E3 /* NewDogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDC9A201FDE44004870E3 /* NewDogInteractor.swift */; };
 		1F2BDCA1201FDE44004870E3 /* NewDogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDC9B201FDE44004870E3 /* NewDogView.swift */; };
 		1F2BDCA5201FDF51004870E3 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDCA4201FDF51004870E3 /* Typealiases.swift */; };
+		1F2BDCA9201FE450004870E3 /* DogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDCA7201FE450004870E3 /* DogTableViewCell.swift */; };
+		1F2BDCAA201FE450004870E3 /* DogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2BDCA8201FE450004870E3 /* DogTableViewCell.xib */; };
 		5D0D5DDE20A40A4C6E062B5A /* Pods_DogsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072CB9313C582B80A1179859 /* Pods_DogsUITests.framework */; };
 		FE2EF1964586A8E78F0CA7FD /* Pods_DogsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 007AF5A6C9574E16A431A99D /* Pods_DogsTests.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +84,8 @@
 		1F2BDC9A201FDE44004870E3 /* NewDogInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDogInteractor.swift; sourceTree = "<group>"; };
 		1F2BDC9B201FDE44004870E3 /* NewDogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDogView.swift; sourceTree = "<group>"; };
 		1F2BDCA4201FDF51004870E3 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		1F2BDCA7201FE450004870E3 /* DogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogTableViewCell.swift; sourceTree = "<group>"; };
+		1F2BDCA8201FE450004870E3 /* DogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogTableViewCell.xib; sourceTree = "<group>"; };
 		574D60D18784B0CEE9D8C66F /* Pods-DogsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DogsUITests/Pods-DogsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6B77C92CF2FA876E57A3FE9B /* Pods-Dogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dogs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dogs/Pods-Dogs.release.xcconfig"; sourceTree = "<group>"; };
 		7211AF7A4C6CC8D3D141B3F8 /* Pods-DogsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DogsTests/Pods-DogsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 		1F2BDC82201FC74D004870E3 /* DogsList */ = {
 			isa = PBXGroup;
 			children = (
+				1F2BDCA6201FE433004870E3 /* Cells */,
 				1F2BDC83201FC760004870E3 /* DogsList.storyboard */,
 				1F2BDC84201FC760004870E3 /* DogsListDisplayData.swift */,
 				1F2BDC85201FC760004870E3 /* DogsListPresenter.swift */,
@@ -241,6 +246,15 @@
 				1F2BDCA4201FDF51004870E3 /* Typealiases.swift */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		1F2BDCA6201FE433004870E3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1F2BDCA7201FE450004870E3 /* DogTableViewCell.swift */,
+				1F2BDCA8201FE450004870E3 /* DogTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		342D889DACA6CAEA988510B7 /* Frameworks */ = {
@@ -382,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F2BDCAA201FE450004870E3 /* DogTableViewCell.xib in Resources */,
 				1F2BDC5E201FC664004870E3 /* LaunchScreen.storyboard in Resources */,
 				1F2BDC9C201FDE44004870E3 /* NewDog.storyboard in Resources */,
 				1F2BDC5B201FC664004870E3 /* Assets.xcassets in Resources */,
@@ -575,6 +590,7 @@
 				1F2BDC94201FDABB004870E3 /* Dog.swift in Sources */,
 				1F2BDC90201FC770004870E3 /* AppModules.swift in Sources */,
 				1F2BDC8B201FC760004870E3 /* DogsListPresenter.swift in Sources */,
+				1F2BDCA9201FE450004870E3 /* DogTableViewCell.swift in Sources */,
 				1F2BDC8D201FC760004870E3 /* DogsListInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

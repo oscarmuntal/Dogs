@@ -18,6 +18,7 @@ final class DogsListView: UserInterface {
     
     @IBOutlet weak var emptyListLabel: UILabel!
     @IBOutlet weak var addDogButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     @IBAction func addDogButtonAction(_ sender: Any) {
         newDog()
@@ -36,13 +37,21 @@ extension DogsListView {
         setAddMonumentButton()
         initializeEmptyListProperties()
         
+        let fakeDog = Dog(name: "Fake Dog", gender: .Female, size: .Large, age: 21)
+        presenter.dogs.append(fakeDog)
+        
         if presenter.dogs.isEmpty {
             showEmptyProperties()
         } else {
             hideEmptyProperties()
         }
+        registerCells()
+        reloadData()
     }
     
+    private func registerCells() {
+        tableView.register(UINib(nibName: displayData.dogTableViewCell, bundle: nil), forCellReuseIdentifier: displayData.dogTableViewCell)
+    }
     private func setTitle() {
         title = displayData.dogsListTitle
     }
@@ -58,11 +67,13 @@ extension DogsListView {
     private func showEmptyProperties() {
         self.emptyListLabel.isHidden = false
         self.addDogButton.isHidden = false
+        self.tableView.isHidden = true
     }
     
     private func hideEmptyProperties() {
         self.emptyListLabel.isHidden = true
         self.addDogButton.isHidden = true
+        self.tableView.isHidden = false
     }
     
     private func setAddMonumentButton() {
@@ -81,13 +92,34 @@ extension DogsListView {
         })
     }
     
+    fileprivate func reloadData() {
+        tableView.reloadData()
+    }
+    
+}
+
+extension DogsListView: UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.dogs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: displayData.dogTableViewCell, for: indexPath as IndexPath) as! DogTableViewCell
+        cell.configure(presenter.dogs[indexPath.row])
+        return cell
+    }
 }
 
 extension DogsListView: NewDogViewInterface {
     
     func saveDog(dog: Dog) {
         presenter.addDog(dog)
-//        tableView.reloadData()
+        reloadData()
     }
     
     func setNewDogDelegate(_ newDogViewController: NewDogView) {

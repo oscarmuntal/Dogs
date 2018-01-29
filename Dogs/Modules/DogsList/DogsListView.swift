@@ -20,6 +20,7 @@ final class DogsListView: UserInterface {
     @IBOutlet weak var addDogButton: UIButton!
     
     @IBAction func addDogButtonAction(_ sender: Any) {
+        newDog()
     }
     
     override func viewDidLoad() {
@@ -32,7 +33,7 @@ extension DogsListView {
     
     fileprivate func setUI() {
         setTitle()
-        setNavigationBarColor()
+        setAddMonumentButton()
         initializeEmptyListProperties()
         
         if presenter.dogs.isEmpty {
@@ -44,11 +45,6 @@ extension DogsListView {
     
     private func setTitle() {
         title = displayData.dogsListTitle
-    }
-    
-    private func setNavigationBarColor() {
-        navigationController?.navigationBar.barTintColor = UIColor.red
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
     
     private func initializeEmptyListProperties() {
@@ -69,6 +65,34 @@ extension DogsListView {
         self.addDogButton.isHidden = true
     }
     
+    private func setAddMonumentButton() {
+        let addDogButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action:  #selector(addDogButtonAction))
+        addDogButton.tintColor = UIColor.white
+        self.navigationItem.setRightBarButtonItems([addDogButton], animated: true)
+    }
+    
+    @objc private func addDogButtonAction(sender: UIButton!) {
+        newDog()
+    }
+    
+    fileprivate func newDog() {
+        presenter.addDogTapped(onSuccess: { newDogViewController in
+            self.setNewDogDelegate(newDogViewController)
+        })
+    }
+    
+}
+
+extension DogsListView: NewDogViewInterface {
+    
+    func saveDog(dog: Dog) {
+        presenter.addDog(dog)
+//        tableView.reloadData()
+    }
+    
+    func setNewDogDelegate(_ newDogViewController: NewDogView) {
+        newDogViewController.delegate = self
+    }
 }
 
 //MARK: - Public interface

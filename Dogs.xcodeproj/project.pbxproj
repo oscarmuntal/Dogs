@@ -23,6 +23,13 @@
 		1F2BDC8E201FC760004870E3 /* DogsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDC88201FC760004870E3 /* DogsListView.swift */; };
 		1F2BDC90201FC770004870E3 /* AppModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDC8F201FC770004870E3 /* AppModules.swift */; };
 		1F2BDC94201FDABB004870E3 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDC93201FDABB004870E3 /* Dog.swift */; };
+		1F2BDC9C201FDE44004870E3 /* NewDog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F2BDC96201FDE44004870E3 /* NewDog.storyboard */; };
+		1F2BDC9D201FDE44004870E3 /* NewDogDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDC97201FDE44004870E3 /* NewDogDisplayData.swift */; };
+		1F2BDC9E201FDE44004870E3 /* NewDogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDC98201FDE44004870E3 /* NewDogPresenter.swift */; };
+		1F2BDC9F201FDE44004870E3 /* NewDogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDC99201FDE44004870E3 /* NewDogRouter.swift */; };
+		1F2BDCA0201FDE44004870E3 /* NewDogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDC9A201FDE44004870E3 /* NewDogInteractor.swift */; };
+		1F2BDCA1201FDE44004870E3 /* NewDogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDC9B201FDE44004870E3 /* NewDogView.swift */; };
+		1F2BDCA5201FDF51004870E3 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BDCA4201FDF51004870E3 /* Typealiases.swift */; };
 		5D0D5DDE20A40A4C6E062B5A /* Pods_DogsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072CB9313C582B80A1179859 /* Pods_DogsUITests.framework */; };
 		FE2EF1964586A8E78F0CA7FD /* Pods_DogsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 007AF5A6C9574E16A431A99D /* Pods_DogsTests.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +75,13 @@
 		1F2BDC88201FC760004870E3 /* DogsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsListView.swift; sourceTree = "<group>"; };
 		1F2BDC8F201FC770004870E3 /* AppModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModules.swift; sourceTree = "<group>"; };
 		1F2BDC93201FDABB004870E3 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		1F2BDC96201FDE44004870E3 /* NewDog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewDog.storyboard; sourceTree = "<group>"; };
+		1F2BDC97201FDE44004870E3 /* NewDogDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDogDisplayData.swift; sourceTree = "<group>"; };
+		1F2BDC98201FDE44004870E3 /* NewDogPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDogPresenter.swift; sourceTree = "<group>"; };
+		1F2BDC99201FDE44004870E3 /* NewDogRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDogRouter.swift; sourceTree = "<group>"; };
+		1F2BDC9A201FDE44004870E3 /* NewDogInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDogInteractor.swift; sourceTree = "<group>"; };
+		1F2BDC9B201FDE44004870E3 /* NewDogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDogView.swift; sourceTree = "<group>"; };
+		1F2BDCA4201FDF51004870E3 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		574D60D18784B0CEE9D8C66F /* Pods-DogsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DogsUITests/Pods-DogsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6B77C92CF2FA876E57A3FE9B /* Pods-Dogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dogs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dogs/Pods-Dogs.release.xcconfig"; sourceTree = "<group>"; };
 		7211AF7A4C6CC8D3D141B3F8 /* Pods-DogsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DogsTests/Pods-DogsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +147,7 @@
 				1F2BDC53201FC664004870E3 /* AppDelegate.swift */,
 				1F2BDC81201FC745004870E3 /* Modules */,
 				1F2BDC91201FDAA2004870E3 /* Network */,
+				1F2BDCA2201FDF37004870E3 /* Common */,
 				1F2BDC55201FC664004870E3 /* ViewController.swift */,
 				1F2BDC57201FC664004870E3 /* Main.storyboard */,
 				1F2BDC5A201FC664004870E3 /* Assets.xcassets */,
@@ -165,6 +180,7 @@
 			children = (
 				1F2BDC8F201FC770004870E3 /* AppModules.swift */,
 				1F2BDC82201FC74D004870E3 /* DogsList */,
+				1F2BDC95201FDE37004870E3 /* NewDog */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -196,6 +212,35 @@
 				1F2BDC93201FDABB004870E3 /* Dog.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1F2BDC95201FDE37004870E3 /* NewDog */ = {
+			isa = PBXGroup;
+			children = (
+				1F2BDC96201FDE44004870E3 /* NewDog.storyboard */,
+				1F2BDC97201FDE44004870E3 /* NewDogDisplayData.swift */,
+				1F2BDC98201FDE44004870E3 /* NewDogPresenter.swift */,
+				1F2BDC99201FDE44004870E3 /* NewDogRouter.swift */,
+				1F2BDC9A201FDE44004870E3 /* NewDogInteractor.swift */,
+				1F2BDC9B201FDE44004870E3 /* NewDogView.swift */,
+			);
+			path = NewDog;
+			sourceTree = "<group>";
+		};
+		1F2BDCA2201FDF37004870E3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1F2BDCA3201FDF3D004870E3 /* Others */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1F2BDCA3201FDF3D004870E3 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				1F2BDCA4201FDF51004870E3 /* Typealiases.swift */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 		342D889DACA6CAEA988510B7 /* Frameworks */ = {
@@ -338,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F2BDC5E201FC664004870E3 /* LaunchScreen.storyboard in Resources */,
+				1F2BDC9C201FDE44004870E3 /* NewDog.storyboard in Resources */,
 				1F2BDC5B201FC664004870E3 /* Assets.xcassets in Resources */,
 				1F2BDC59201FC664004870E3 /* Main.storyboard in Resources */,
 				1F2BDC89201FC760004870E3 /* DogsList.storyboard in Resources */,
@@ -515,10 +561,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F2BDCA0201FDE44004870E3 /* NewDogInteractor.swift in Sources */,
 				1F2BDC8A201FC760004870E3 /* DogsListDisplayData.swift in Sources */,
+				1F2BDCA5201FDF51004870E3 /* Typealiases.swift in Sources */,
+				1F2BDC9E201FDE44004870E3 /* NewDogPresenter.swift in Sources */,
 				1F2BDC8C201FC760004870E3 /* DogsListRouter.swift in Sources */,
+				1F2BDCA1201FDE44004870E3 /* NewDogView.swift in Sources */,
+				1F2BDC9D201FDE44004870E3 /* NewDogDisplayData.swift in Sources */,
 				1F2BDC56201FC664004870E3 /* ViewController.swift in Sources */,
 				1F2BDC8E201FC760004870E3 /* DogsListView.swift in Sources */,
+				1F2BDC9F201FDE44004870E3 /* NewDogRouter.swift in Sources */,
 				1F2BDC54201FC664004870E3 /* AppDelegate.swift in Sources */,
 				1F2BDC94201FDABB004870E3 /* Dog.swift in Sources */,
 				1F2BDC90201FC770004870E3 /* AppModules.swift in Sources */,

@@ -12,6 +12,14 @@ import Viperit
 class DogsListPresenter: Presenter {
     
     var dogs: [Dog] = []
+    
+    func addDogTapped(onSuccess: @escaping ObjectClosure<NewDogView>) {
+        router.goToNewDog(onSuccess: onSuccess)
+    }
+    
+    func addDog(_ dog: Dog) {
+        self.dogs.append(dog)
+    }
 }
 
 

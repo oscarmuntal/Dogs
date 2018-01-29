@@ -10,6 +10,13 @@ import Foundation
 import Viperit
 
 class DogsListRouter: Router {
+    
+    func goToNewDog(onSuccess: @escaping ObjectClosure<NewDogView>) {
+        guard   let detailRouter = AppModules.NewDog.build().router as? NewDogRouter,
+        let vc = self.presenter._view else { return }
+        
+        detailRouter.showNewDog(fromVC: vc, onSuccess: onSuccess)
+    }
 }
 
 // MARK: - VIPER COMPONENTS API (Auto-generated code)

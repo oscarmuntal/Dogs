@@ -17,12 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let module = AppModules.DogsList.build()
         let navigationController = UINavigationController(rootViewController: module.view)
+        self.setNavigationBarColor(navigationController)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    private func setNavigationBarColor(_ navigationController: UINavigationController) {
+        navigationController.navigationBar.barTintColor = UIColor.red
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

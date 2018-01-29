@@ -20,8 +20,53 @@
                     <view key="view" contentMode="scaleToFill" id="kgt-o0-aP8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.038229439480000002" green="0.81753008019999995" blue="0.081952959180000007" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Guz-ve-3ba" userLabel="Empty View">
+                                <rect key="frame" x="20" y="40" width="335" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iD-ws-qxQ" userLabel="Empty List">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="0dD-9B-L9C"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnq-fV-E8L">
+                                        <rect key="frame" x="92.5" y="40" width="150" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="4AP-fW-XRY"/>
+                                            <constraint firstAttribute="height" constant="50" id="5fi-dt-afD"/>
+                                        </constraints>
+                                        <state key="normal" title="Add a dog"/>
+                                        <connections>
+                                            <action selector="addDogButtonAction:" destination="xqD-av-Raz" eventType="touchUpInside" id="PHg-2t-cI6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qnq-fV-E8L" firstAttribute="centerX" secondItem="Guz-ve-3ba" secondAttribute="centerX" id="8tl-JM-bhW"/>
+                                    <constraint firstAttribute="trailing" secondItem="8iD-ws-qxQ" secondAttribute="trailing" id="NMj-a9-kHy"/>
+                                    <constraint firstItem="8iD-ws-qxQ" firstAttribute="leading" secondItem="Guz-ve-3ba" secondAttribute="leading" id="ZMT-0d-jOU"/>
+                                    <constraint firstItem="qnq-fV-E8L" firstAttribute="top" secondItem="8iD-ws-qxQ" secondAttribute="bottom" constant="10" id="jUn-CJ-VTl"/>
+                                    <constraint firstItem="8iD-ws-qxQ" firstAttribute="top" secondItem="Guz-ve-3ba" secondAttribute="top" id="w2Q-74-yYg"/>
+                                    <constraint firstAttribute="bottom" secondItem="qnq-fV-E8L" secondAttribute="bottom" id="xB3-1K-4zZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Guz-ve-3ba" firstAttribute="top" secondItem="EcR-ye-kTk" secondAttribute="bottom" constant="20" id="118-lI-n0Q"/>
+                            <constraint firstAttribute="trailing" secondItem="Guz-ve-3ba" secondAttribute="trailing" constant="20" id="ET2-RS-PsE"/>
+                            <constraint firstItem="Guz-ve-3ba" firstAttribute="leading" secondItem="kgt-o0-aP8" secondAttribute="leading" constant="20" id="dhz-6Q-mMT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addDogButton" destination="qnq-fV-E8L" id="R7l-gd-xXf"/>
+                        <outlet property="emptyListLabel" destination="8iD-ws-qxQ" id="sme-AC-xWx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXm-AG-NXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

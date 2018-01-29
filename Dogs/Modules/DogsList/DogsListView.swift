@@ -15,6 +15,60 @@ protocol DogsListViewInterface {
 
 //MARK: DogsListView Class
 final class DogsListView: UserInterface {
+    
+    @IBOutlet weak var emptyListLabel: UILabel!
+    @IBOutlet weak var addDogButton: UIButton!
+    
+    @IBAction func addDogButtonAction(_ sender: Any) {
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUI()
+    }
+}
+
+extension DogsListView {
+    
+    fileprivate func setUI() {
+        setTitle()
+        setNavigationBarColor()
+        initializeEmptyListProperties()
+        
+        if presenter.dogs.isEmpty {
+            showEmptyProperties()
+        } else {
+            hideEmptyProperties()
+        }
+    }
+    
+    private func setTitle() {
+        title = displayData.dogsListTitle
+    }
+    
+    private func setNavigationBarColor() {
+        navigationController?.navigationBar.barTintColor = UIColor.red
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+    }
+    
+    private func initializeEmptyListProperties() {
+        emptyListLabel.text = displayData.emptyListLabel
+        addDogButton.setTitle(displayData.addDogButtonLabel, for: .normal)
+        addDogButton.backgroundColor = UIColor.red
+        addDogButton.layer.cornerRadius = 10
+        addDogButton.clipsToBounds = true
+    }
+    
+    private func showEmptyProperties() {
+        self.emptyListLabel.isHidden = false
+        self.addDogButton.isHidden = false
+    }
+    
+    private func hideEmptyProperties() {
+        self.emptyListLabel.isHidden = true
+        self.addDogButton.isHidden = true
+    }
+    
 }
 
 //MARK: - Public interface

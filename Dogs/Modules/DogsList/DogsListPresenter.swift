@@ -10,6 +10,8 @@ import Foundation
 import Viperit
 
 class DogsListPresenter: Presenter {
+    
+    var dogs: [String] = []
 }
 
 

@@ -11,7 +11,7 @@ import Viperit
 
 class DogsListPresenter: Presenter {
     
-    var dogs: [String] = []
+    var dogs: [Dog] = []
 }
 
 

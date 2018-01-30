@@ -15,7 +15,6 @@ class DogTableViewCell: UITableViewCell {
     
     func configure(_ dog: Dog) {
         titleLabel.text = dog.name
-        
         subtitleLabel.text = "\(gender(dog)), \(years(dog)) years old"
     }
     

@@ -11,8 +11,30 @@ import Viperit
 
 class NewDogPresenter: Presenter {
     
+    var dog: Dog?
     var onSuccess: ObjectClosure<NewDogView>?
     
+    func validateDog() -> Bool {
+        if  isValidName() && isValidDescription() {
+            return true
+        } else { return false }
+    }
+    
+    func isValidName() -> Bool {
+        if  let validDog = self.dog,
+            let name = validDog.name,
+            name != "" {
+            return true
+        } else { return false }
+    }
+    
+    func isValidDescription() -> Bool {
+        if  let validDog = self.dog,
+            let description = validDog.description,
+            description != "" {
+            return true
+        } else { return false }
+    }
 }
 
 

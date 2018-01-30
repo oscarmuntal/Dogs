@@ -37,7 +37,7 @@ extension DogsListView {
         setAddMonumentButton()
         initializeEmptyListProperties()
         
-        let fakeDog = Dog(name: "Fake Dog", gender: .Female, size: .Large, age: 21)
+        let fakeDog = Dog(name: "Fake Dog", description: "", gender: .Female, size: .Large, age: 21)
         presenter.dogs.append(fakeDog)
         
         if presenter.dogs.isEmpty {
@@ -117,7 +117,7 @@ extension DogsListView: UITableViewDelegate, UITableViewDataSource {
 
 extension DogsListView: NewDogViewInterface {
     
-    func saveDog(dog: Dog) {
+    func saveDog(_ dog: Dog) {
         presenter.addDog(dog)
         reloadData()
     }

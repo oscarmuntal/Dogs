@@ -23,19 +23,22 @@ enum Size: String {
 class Dog {
     
     var name: String?
+    var description: String?
     var gender: Gender?
     var size: Size?
     var age: Int?
     
     init() {
         self.name = nil
+        self.description = nil
         self.gender = nil
         self.size = nil
         self.age = nil
     }
     
-    init(name: String, gender: Gender, size: Size, age: Int) {
+    init(name: String, description: String, gender: Gender, size: Size, age: Int) {
         self.name = name
+        self.description = description
         self.gender = gender
         self.size = size
         self.age = age
